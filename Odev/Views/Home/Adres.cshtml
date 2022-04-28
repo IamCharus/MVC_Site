@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Adres";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div id="sidebar" class="span3">
+        <div class="well well-small">
+            <ul class="nav nav-list">
+                @Html.Action("_CategoryList", "Category")
+                <li style="border:0"> &nbsp;</li>
+                @Html.Action("Summary", "Cart")
+            </ul>
+        </div>
+
+
+        @Html.Action("_FeatureProductList", "Home")
+
+    </div>
+    <div class="span9">
+        <ul class="breadcrumb">
+            <li><a href="/Home/Index">Anasayfa</a> <span class="divider">/</span></li>
+          
+            <li class="active">Adres</li>
+        </ul>
+        <div class="well well-small">
+            <h4>Adres : 50. Yıl, 2071. Sk. No 5/A, 34265 Sultangazi/İstanbul</h4>
+            <h4>Telefon : 212 212 12 12</h4>
+            <hr class="softn clr">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152940.3744656877!2d27.876453623442575!3d39.490936078692286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab106a3c69779%3A0x2600d4f6eaf30391!2zw4dlbGlrIEJpbGnFn2lt!5e0!3m2!1str!2str!4v1648844275607!5m2!1str!2str"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+
+        </div>
+    </div>
+</div>
+

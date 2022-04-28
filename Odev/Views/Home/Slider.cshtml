@@ -1,0 +1,27 @@
+﻿@using Odev.Entity
+@model IEnumerable<Product>
+<div class="carousel slide homCar" id="myCarousel">
+    <div class="carousel-inner">
+
+        <div class="item active">
+            <img style="width: 100%;" alt="bootstrap ecommerce templates" src="~/Content/image/pc3.jpg">
+            <div class="carousel-caption">
+                <h4>YENİ ÜRÜN</h4>
+                <p><span>Lenovo IdelPad S-145</span></p>
+            </div>
+        </div>
+        @foreach (var item in Model)
+        {
+            <div class="item">
+                <a href="/Home/ProductDetails/@item.Id"> <img style="width: 100%;" alt="bootstrap templates" max-width-698px; max-height:327px; min-height:327px; min-width:698px;  src="~/Content/image/@item.Image"> </a>
+                <div class="carousel-caption">
+                    <h4>@item.Name</h4>
+                    <p><span>@item.Price (₺)</span></p>
+                </div>
+            </div>
+        }
+
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+</div>
